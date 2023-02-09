@@ -25,6 +25,9 @@ def main():
 
         request = Request(user_input)
 
+        if request.product not in store.get_items().keys():
+            print("Такой товар отсутствует, попробуйте ввести другой")
+            continue
         if store.get_items().get(request.product) >= request.amount and shop.get_free_space() >= request.amount:
             print("Нужное количество есть на складе и в магазине достаточно места")
         elif store.get_items().get(request.product) >= request.amount and shop.get_free_space() <= request.amount:

@@ -1,4 +1,4 @@
-from storage import Storage
+from classes.storage import Storage
 
 
 class Shop(Storage):
